@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Reset button check Reset renders correctly 1`] = `
+<DocumentFragment>
+  <button
+    class="css-1kb3z2h"
+  >
+    🙂
+  </button>
+</DocumentFragment>
+`;
