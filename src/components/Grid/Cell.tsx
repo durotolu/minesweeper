@@ -1,7 +1,7 @@
 import React, { FC, memo } from 'react';
 import styled from '@emotion/styled';
 
-import { Cell as CellType, Coords, CellState } from '@/helpers/Field';
+import { Cell as CellType, Coords, CellState } from '@/core/Field';
 
 import { useMouseDown } from '@/components/hooks/useMouseDown';
 

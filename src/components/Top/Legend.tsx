@@ -13,7 +13,7 @@ export interface LegendProps {
  /**
   * Second action
  */
-  secondAction: string;
+  secondAction?: string;
 }
 
 export const Legend: FC<LegendProps> = ({

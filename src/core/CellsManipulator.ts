@@ -40,7 +40,7 @@ export const incrementNeighbours = (coords: Coords, field: Field): Field => {
   for (const [y, x] of Object.values(items)) {
     if (checkItemInField([y, x], field)) {
       const cell = field[y][x];
-      if (cell < (CellState.bomb - 1)) {
+      if (cell < CellState.bomb - 1) {
         field[y][x] = (cell + 1) as Cell;
       }
     }

@@ -17,23 +17,23 @@ describe("Scoreboard test cases", () => {
 
     expect(asFragment()).toMatchSnapshot();
   });
-  // it("Scoreboard select level handler check", () => {
-  //   const onChange = jest.fn();
+  it("Scoreboard select level handler check", async () => {
+    const onChange = jest.fn();
 
-  //   render(
-  //     <Scoreboard
-  //       time="000"
-  //       levels={["beginner", "intermediate", "expert"]}
-  //       bombs="010"
-  //       onReset={() => null}
-  //       onChangeLevel={onChange}
-  //     />
-  //   );
+    render(
+      <Scoreboard
+        time="000"
+        levels={["beginner", "intermediate", "expert"]}
+        bombs="010"
+        onReset={() => null}
+        onChangeLevel={onChange}
+      />
+    );
 
-  //   userEvent.selectOptions(screen.getByRole("combobox"), "expert");
+    await userEvent.selectOptions(screen.getByRole("combobox"), "expert");
 
-  //   expect(screen.getByRole("option", { name: "expert" })).toBeEnabled();
+    expect(screen.getByRole("option", { name: "expert" })).toBeEnabled();
 
-  //   expect(onChange).toHaveBeenCalled();
-  // });
+    expect(onChange).toHaveBeenCalled();
+  });
 });

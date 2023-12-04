@@ -4,7 +4,8 @@ export interface GameNameProps {
   /**
    * Text inside the header
    */
-  children: string;
+  // @todo not sure what type should be
+  children: string | string[];
 }
 
 export const GameName = styled.h1<GameNameProps>`

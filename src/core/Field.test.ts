@@ -1,19 +1,19 @@
-import { emptyFieldGenerator, CellState, fieldGenerator, Cell } from "./Field";
+import { generateFieldWithDefaultState, CellState, fieldGenerator, Cell } from "./Field";
 
 const { empty, bomb, hidden } = CellState;
 
 const cellWithBombFilter = (cell: Cell) => cell === bomb;
 
 describe("Field Generator", () => {
-  describe("emptyFieldGenerator tests", () => {
+  describe("generateFieldWithDefaultState tests", () => {
     it("2x2", () => {
-      expect(emptyFieldGenerator(2)).toStrictEqual([
+      expect(generateFieldWithDefaultState(2)).toStrictEqual([
         [empty, empty],
         [empty, empty],
       ]);
     });
     it("4x4", () => {
-      expect(emptyFieldGenerator(4)).toStrictEqual([
+      expect(generateFieldWithDefaultState(4)).toStrictEqual([
         [empty, empty, empty, empty],
         [empty, empty, empty, empty],
         [empty, empty, empty, empty],
@@ -21,7 +21,7 @@ describe("Field Generator", () => {
       ]);
     });
     it("2x2", () => {
-      expect(emptyFieldGenerator(3, hidden)).toStrictEqual([
+      expect(generateFieldWithDefaultState(3, hidden)).toStrictEqual([
         [hidden, hidden, hidden],
         [hidden, hidden, hidden],
         [hidden, hidden, hidden],
@@ -59,9 +59,6 @@ describe("Field Generator", () => {
       const field = fieldGenerator(2, 0.5);
       const flatField = field.flat();
 
-      // console.log(field);
-      // console.log(flatField);
-
       const cellsWithBombs = flatField.filter((cell) => cell === bomb);
       const emptyCells = flatField.filter((cell) => cell === 2);
 
@@ -74,8 +71,6 @@ describe("Field Generator", () => {
 
       const probability = mines / (size * size);
       const field = fieldGenerator(size, probability);
-
-      console.table(field);
 
       const flatField = field.flat();
 

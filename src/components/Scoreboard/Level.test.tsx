@@ -16,19 +16,19 @@ describe("Level test cases", () => {
 
     expect(asFragment()).toMatchSnapshot();
   });
-  // it("Select level behaviour", () => {
-  //   const onChange = jest.fn();
+  it("Select level behaviour", async () => {
+    const onChange = jest.fn();
 
-  //   render(
-  //     <Level onChange={onChange}>
-  //       {["beginner", "intermediate", "expert"]}
-  //     </Level>
-  //   );
+    render(
+      <Level onChange={onChange}>
+        {["beginner", "intermediate", "expert"]}
+      </Level>
+    );
 
-  //   userEvent.selectOptions(screen.getByRole("combobox"), "intermediate");
+    await userEvent.selectOptions(screen.getByRole("combobox"), "intermediate");
 
-  //   expect(screen.getByRole("option", { name: "intermediate" })).toBeEnabled();
+    expect(screen.getByRole("option", { name: "intermediate" })).toBeEnabled();
 
-  //   expect(onChange).toHaveBeenCalled();
-  // });
+    expect(onChange).toHaveBeenCalled();
+  });
 });

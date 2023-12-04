@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Game Over test cases GameOver render fail correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1p4hvro"
+  >
+    🙁
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Game Over test cases GameOver render win correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="css-1p4hvro"
+  >
+    😎
+  </div>
+</DocumentFragment>
+`;
