@@ -6,10 +6,8 @@ module.exports = function (api) {
     "@babel/preset-typescript",
     "@babel/preset-react",
   ];
-  // const plugins = [ ... ];
 
   return {
     presets,
-    // plugins
   };
 };
