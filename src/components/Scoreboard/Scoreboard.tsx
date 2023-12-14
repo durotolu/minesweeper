@@ -1,9 +1,9 @@
-import React, { FC, ChangeEvent } from 'react';
-import styled from '@emotion/styled';
+import React, { FC, ChangeEvent } from "react";
+import styled from "@emotion/styled";
 
-import { Counter } from './Counter';
-import { Level } from './Level';
-import { Reset } from './Reset';
+import { Counter } from "./Counter";
+import { Level } from "./Level";
+import { Reset } from "./Reset";
 
 export interface ScoreboardProps {
   /**
@@ -42,7 +42,7 @@ export const Scoreboard: FC<ScoreboardProps> = ({
 }) => (
   <Wrapper>
     <Counter>{time}</Counter>
-    <div>
+    <div style={{ display: "flex" }}>
       <Level onChange={onChange} value={defaultLevel}>
         {levels}
       </Level>

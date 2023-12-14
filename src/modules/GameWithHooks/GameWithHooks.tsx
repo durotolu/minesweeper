@@ -37,9 +37,6 @@ export const GameWithHooks: FC = () => {
 
   return (
     <Wrapper>
-      <Top feature="Flag" firstAction="right click">
-        Minesweeper
-      </Top>
       <GameArea>
         <Scoreboard
           time={String(time)}

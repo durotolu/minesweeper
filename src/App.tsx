@@ -45,8 +45,8 @@ export const Navigation: FC = () => {
   });
 
   return (
-    <nav>
-      <ul>
+    <nav style={{ textAlign: "center" }}>
+      <ul style={{ display: "contents" }}>
         <li>
           <Link to={getLocatioObjWithSearchParams("/")}>Home</Link>
         </li>
@@ -125,4 +125,8 @@ export const App: FC = () => (
   </BrowserRouter>
 );
 
-export const Home: FC = () => <h2>Minesweeper game Forever!</h2>;
+export const Home: FC = () => (
+  <h2 style={{ textAlign: "center", marginTop: "50px" }}>
+    👆 Navigate Minesweeper game options above ☝️
+  </h2>
+);

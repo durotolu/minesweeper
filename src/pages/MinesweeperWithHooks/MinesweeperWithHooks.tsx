@@ -17,9 +17,7 @@ export const MinesweeperWithHooks: FC = () => {
     <GameLayout
       top={
         <Top feature="Flag" firstAction="right click">
-          {`Minesweeper with ReactHooks special for you${
-            username ? `, ${username}` : ""
-          }`}
+          {`Minesweeper with ReactHooks${username ? `, ${username}` : ""}`}
           {id ? `; userId: ${id}` : ""}
         </Top>
       }

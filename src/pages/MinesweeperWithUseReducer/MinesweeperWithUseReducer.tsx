@@ -10,7 +10,7 @@ export const MinesweeperWithUseReducer: FC = () => {
     <GameLayout
       top={
         <Top feature="Flag" firstAction="right click">
-          Minesweeper with React+Redux and useReducer special for you
+          Minesweeper with React+Redux and useReducer
         </Top>
       }
     >
